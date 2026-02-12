@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>QuantCoreE2EAndThroughputBench-20260212-165917</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.7840/25H2/2025Update/HudsonValley2)
+11th Gen Intel Core i5-11400F 2.60GHz (Max: 2.59GHz), 1 CPU, 12 logical and 6 physical cores
+.NET SDK 10.0.102
+  [Host]     : .NET 8.0.24 (8.0.24, 8.0.2426.7010), X64 RyuJIT x86-64-v4
+  Job-OEHQXX : .NET 8.0.24 (8.0.24, 8.0.2426.7010), X64 RyuJIT x86-64-v4
+</code></pre>
+<pre><code>IterationCount=20  LaunchCount=1  WarmupCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>Method                    </th><th>N</th><th>Mean  </th><th>Error</th><th>StdDev</th><th>P95</th><th>P99</th><th>Min   </th><th>Median</th><th>Max   </th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>E2E_Price_AoS_To_Array_P99Target</td><td>500</td><td>21.78 &mu;s</td><td>0.289 &mu;s</td><td>0.296 &mu;s</td><td>22,46 &mu;s</td><td>22,46 &mu;s</td><td>21.20 &mu;s</td><td>21.82 &mu;s</td><td>22.46 &mu;s</td><td>-</td>
+</tr><tr><td>THROUGHPUT_PriceBatch_1M_SoA</td><td>500</td><td>41,404.00 &mu;s</td><td>390.205 &mu;s</td><td>433.711 &mu;s</td><td>42,27 ms</td><td>42,27 ms</td><td>40,784.12 &mu;s</td><td>41,343.22 &mu;s</td><td>42,274.38 &mu;s</td><td>-</td>
+</tr><tr><td>E2E_Price_AoS_To_Array_P99Target</td><td>5000</td><td>211.11 &mu;s</td><td>1.480 &mu;s</td><td>1.645 &mu;s</td><td>213,81 &mu;s</td><td>213,81 &mu;s</td><td>208.58 &mu;s</td><td>211.00 &mu;s</td><td>213.81 &mu;s</td><td>-</td>
+</tr><tr><td>THROUGHPUT_PriceBatch_1M_SoA</td><td>5000</td><td>40,754.87 &mu;s</td><td>552.105 &mu;s</td><td>635.805 &mu;s</td><td>41,94 ms</td><td>41,98 ms</td><td>39,869.13 &mu;s</td><td>40,692.97 &mu;s</td><td>41,984.22 &mu;s</td><td>-</td>
+</tr><tr><td>E2E_Price_AoS_To_Array_P99Target</td><td>50000</td><td>2,154.89 &mu;s</td><td>26.952 &mu;s</td><td>29.957 &mu;s</td><td>2,21 ms</td><td>2,21 ms</td><td>2,101.79 &mu;s</td><td>2,153.31 &mu;s</td><td>2,205.38 &mu;s</td><td>-</td>
+</tr><tr><td>THROUGHPUT_PriceBatch_1M_SoA</td><td>50000</td><td>41,182.64 &mu;s</td><td>401.991 &mu;s</td><td>430.125 &mu;s</td><td>42,15 ms</td><td>42,15 ms</td><td>40,591.99 &mu;s</td><td>41,113.82 &mu;s</td><td>42,153.67 &mu;s</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
